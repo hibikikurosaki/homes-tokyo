@@ -77,15 +77,24 @@ section h2 {
           align-items: center;
   width: 100%;
   height: 100px;
-  position: absolute;
-  z-index: 1;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  border-bottom: 3px solid black;
+  padding-top: 21px;
+  padding-bottom: 21px;
+  top: 0;
+  position: fixed;
+  z-index: 10;
+  background-color: white;
+  padding-left: 80px;
+  padding-right: 80px;
 }
 
-.header h1 {
-  margin-left: 20px;
-  margin-bottom: 25px;
-  font-size: 2.5rem;
-  color: #ffffff;
+.header img {
+  margin-top: 50px;
+  height: 350px;
+  width: auto;
 }
 
 .header nav ul {
@@ -99,11 +108,11 @@ section h2 {
 }
 
 .header nav ul li {
-  margin: 0 20px;
+  margin: 0 15px;
 }
 
 .header nav li a {
-  color: #ffffff;
+  color: #888888;
 }
 
 .header nav li a:hover {
@@ -168,44 +177,9 @@ section h2 {
 .mainvisual {
   position: relative;
   overflow: hidden;
-  background-image: url("IMG_3307.JPG");
-  background-size: cover;
-  background-position: center -250px;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  height: 600px;
-  position: relative;
-  z-index: -1;
   width: 100%;
-}
-
-.mainvisual .content {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  z-index: 2;
-  color: #fff;
-}
-
-.mainvisual img {
-  height: 700px;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: 0 15%;
-     object-position: 0 15%;
-  -webkit-clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-  clip-path: polygon(0 0, 100% 0%, 100% 85%, 0% 100%);
-}
-
-.mainvisual h2 {
-  position: absolute;
-  background: rgba(194, 191, 191, 0.39);
-  top: 30%;
-  left: 10%;
-  z-index: 1;
-  font-size: 5vw;
-  color: #fff;
+  top: 100px;
+  display: inline-block;
 }
 
 @media screen and (max-width: 1199px) {
@@ -218,7 +192,7 @@ section h2 {
   width: 100%;
   overflow: hidden;
   position: relative;
-  padding: 120px;
+  padding: 120px 120px 40px 120px;
 }
 
 .topics h1 {
@@ -231,6 +205,7 @@ section h2 {
   display: -webkit-box;
   display: flex;
   margin-top: 20px;
+  padding-top: 100px;
 }
 
 .topics .heading {
@@ -241,11 +216,6 @@ section h2 {
   position: relative;
   padding: 0.25em 0 0.5em 0.75em;
   border-left: 6px solid #888888;
-}
-
-.topics .heading h2:first-letter {
-  margin-right: 0.1em;
-  font-size: 1.5em;
 }
 
 .topics .content {
@@ -261,40 +231,34 @@ section h2 {
 }
 
 .topics .content th {
-  padding: 10px 2em 10px 0;
+  padding: 1px 2em 1px 0;
   border-bottom: 1px dotted;
 }
 
 .topics .content td {
+  height: 50px;
   text-align: center;
-  padding: 10px 2em 10px 0;
+  padding: 1px 2em 1px 0;
   border-bottom: 1px dotted;
-  cursor: pointer;
+}
+
+.topics .content td .Name p {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.topics .content td .Name p img {
+  height: 50px;
+  width: auto;
 }
 
 .topics .content td a {
-  display: block;
+  cursor: pointer;
 }
 
 .topics .content tr:hover {
   font-weight: bold;
   background-color: rgba(136, 136, 136, 0.2);
-}
-
-.topics::after {
-  content: "";
-  background-color: #888888;
-  opacity: 0.2;
-  height: 400%;
-  width: 20%;
-  position: absolute;
-  top: -100%;
-  left: 20%;
-  -webkit-transform-origin: left top;
-          transform-origin: left top;
-  -webkit-transform: skewX(40deg);
-          transform: skewX(40deg);
-  z-index: 3;
 }
 
 @media screen and (max-width: 1199px) {
@@ -317,21 +281,17 @@ section h2 {
 }
 
 @media screen and (max-width: 479px) {
-  .topics .content th {
+  .topics .content tr {
     display: block;
     width: 100%;
     text-align: left;
     padding-top: 1.25em;
     border-bottom: 0;
   }
-  .topics .content td {
-    display: block;
-    width: 100%;
-  }
 }
 
 .footer section {
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .footer .high {
@@ -355,7 +315,7 @@ section h2 {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  margin-bottom: 25px;
+  margin-bottom: 5px;
 }
 
 .footer .high li a {
@@ -368,7 +328,7 @@ section h2 {
 }
 
 .footer .low {
-  padding: 25px 0 80px 0;
+  padding: 25px 0 25px 0;
   color: #333;
 }
 
